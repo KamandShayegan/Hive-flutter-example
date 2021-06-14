@@ -72,10 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 setState(() {
                   rand1 = randMaker();
                   rand2 = randMaker();
-                  addTokens(rand1, rand2);
+                  setTokens(rand1, rand2);
                   firstToken = getFirstToken();
                   secondToken = getSecondToken();
-                  print("added: ( $rand1, $rand2 )");
+                  print("added: ( $firstToken, $secondToken )");
                 });
               },
               child: Text('create'),
@@ -88,8 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   print('( $firstToken, $secondToken )');
                 } catch (e) {
                   print('hive is empty!!!');
-                  print('last data before deletion:');
-                  print('( $firstToken, $secondToken )');
                 }
               },
               child: Text('read'),
@@ -99,10 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 deleteTokens();
                 rand1 = randMaker();
                 rand2 = randMaker();
-                addTokens(rand1, rand2);
+                setTokens(rand1, rand2);
                 firstToken = getFirstToken();
                 secondToken = getSecondToken();
-                print("added: ( $rand1, $rand2 )");
+                print("added: ( $firstToken, $secondToken )");
               },
               child: Text('update'),
             ),
@@ -110,12 +108,6 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 deleteTokens();
                 print('deleted');
-                // rand1 = randMaker();
-                // rand2 = randMaker();
-                // addTokens(rand1, rand2);
-                // firstToken = getFirstToken();
-                // secondToken = getSecondToken();
-                // print("added: $rand1 & $rand2");
               },
               child: Text('delete'),
             ),

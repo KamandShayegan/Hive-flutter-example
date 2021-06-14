@@ -46,7 +46,7 @@ class _AnotherState extends State<Another> {
         child: Text('update'),
         onPressed: () {
           setState(() {
-            addTokens(rand1, rand2);
+            setTokens(rand1, rand2);
             print("new values added ( $rand1, $rand2 )");
           });
         },

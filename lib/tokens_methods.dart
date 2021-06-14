@@ -1,10 +1,10 @@
 import 'package:flutter_app/Boxes.dart';
 import 'package:flutter_app/tokens.dart';
 
-void addTokens(String acToken, String agToken) {
+void setTokens(String fstToken, String sndToken) {
   final tokens = Tokens()
-    ..firstToken = acToken
-    ..secondToken = agToken;
+    ..firstToken = fstToken
+    ..secondToken = sndToken;
 
   final box = Boxes.getTokens();
   box.put('tokens', tokens);
